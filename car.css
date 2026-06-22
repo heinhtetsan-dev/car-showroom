@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+:root {
+    /* Brand Colors */
+    --color-primary: #FF6600;
+
+    /* Neutral/Background Colors */
+    --color-bg-dark: #222222;
+    --color-bg-light: #F9F9F9;
+    --color-white: #FFFFFF;
+
+    /* Text Colors */
+    --color-text-main: #333333;
+    --color-text-muted: #777777;
+
+    /* UI Elements */
+    --color-border: #E5E5E5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "GRAD" 0;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+/* Example Usage */
+body {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-main);
+}
+
+.button-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.section-footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-white);
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.hero_section {
+    position: relative;
+    background-image: url('https://www.jeep-japan.com/content/dam/cross-regional/apac/jeep/ja_jp/bhp_3/slider/jeep_2025_renegade_north_star_edition.jpg.img.1440.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.4) 100%);
+        z-index: 1;
+    }
+
+    .button-primary {
+        padding: 0.6rem;
+    }
+
+    header,
+    .hero-content-container {
+        z-index: 2;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        gap: 6rem;
+
+        img {
+            width: 13rem;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+
+            a {
+                color: var(--color-white);
+                font-size: 0.85rem;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+        }
+
+        .icon-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+
+            .cart-icon {
+                position: relative;
+            }
+        }
+    }
+}
+
+.hero-content-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 80px 0;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-text-content {
+    max-width: 550px;
+    color: var(--color-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    .line-tag {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
+    .pricing {
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+
+        .price-color {
+            color: var(--color-primary);
+        }
+    }
+
+    .description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.featured-vehicle {
+    height: 79vh;
+    width: 100%;
+
+    .feature-discriptions {
+
+        h2 {
+            padding-top: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 0.3rem;
+            text-align: center;
+        }
+    }
+
+    .car-selections {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        background-color: #F9F9F9;
+
+        .car-card {
+            background-color: var(--color-white);
+            padding: 0.2rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                aspect-ratio: 16 / 9;
+            }
+
+            .para {
+                padding: 0.3rem;
+            }
+
+            h2 {
+                font-weight: 700;
+            }
+
+            span {
+                font-size: 0.8rem;
+                display: block;
+                padding: 1rem 0 1rem 0;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                font-size: 0.8rem;
+                background-color: var(--color-border);
+
+                li {
+                    list-style: none;
+                    text-align: center;
+                    padding: 0.2rem 0.4rem;
+                    border: 1px solid var(--color-white);
+                }
+            }
+
+        }
+    }
+
+}
